@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node --version:*)",
+      "Bash(corepack enable:*)",
+      "Bash(node:*)",
+      "Bash(npx tsc:*)",
+      "Bash(lsof:*)",
+      "Bash(xargs kill:*)",
+      "Bash(python3:*)",
+      "Bash(ls:*)",
+      "Bash(curl:*)"
+    ],
+    "additionalDirectories": [
+      "/tmp/actual-test-data",
+      "/home/nodes/development/actual-nextgen/packages/web/src/app/(app)/accounts"
+    ]
+  }
+}

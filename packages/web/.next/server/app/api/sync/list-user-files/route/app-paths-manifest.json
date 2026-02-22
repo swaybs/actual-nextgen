@@ -1,0 +1,3 @@
+{
+  "/api/sync/list-user-files/route": "app/api/sync/list-user-files/route.js"
+}

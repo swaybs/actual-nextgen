@@ -1,0 +1,187 @@
+@import "tailwindcss";
+
+/*
+ * Theme tokens mapped from @actual-app/components theme.ts
+ * Using CSS custom properties so dark/light themes work via data-theme attribute
+ */
+
+@theme {
+  /* Breakpoints from component-library tokens.ts */
+  --breakpoint-sm: 512px;
+  --breakpoint-md: 730px;
+  --breakpoint-lg: 1100px;
+
+  /* Colors mapped from Actual's palette */
+  --color-page-background: var(--color-pageBackground);
+  --color-page-text: var(--color-pageText);
+  --color-page-text-subdued: var(--color-pageTextSubdued);
+  --color-page-text-light: var(--color-pageTextLight);
+
+  --color-sidebar-background: var(--color-sidebarBackground);
+  --color-sidebar-item-text: var(--color-sidebarItemText);
+  --color-sidebar-item-text-selected: var(--color-sidebarItemTextSelected);
+  --color-sidebar-item-bg-hover: var(--color-sidebarItemBackgroundHover);
+  --color-sidebar-item-accent-selected: var(--color-sidebarItemAccentSelected);
+  --color-sidebar-budget-name: var(--color-sidebarBudgetName);
+
+  --color-card-background: var(--color-cardBackground);
+  --color-card-border: var(--color-cardBorder);
+
+  --color-table-background: var(--color-tableBackground);
+  --color-table-header-background: var(--color-tableHeaderBackground);
+  --color-table-row-background-hover: var(--color-tableRowBackgroundHover);
+  --color-table-border: var(--color-tableBorder);
+  --color-table-text: var(--color-tableText);
+
+  --color-button-primary-bg: var(--color-buttonPrimaryBackground);
+  --color-button-primary-text: var(--color-buttonPrimaryText);
+  --color-button-primary-border: var(--color-buttonPrimaryBorder);
+  --color-button-normal-bg: var(--color-buttonNormalBackground);
+  --color-button-normal-text: var(--color-buttonNormalText);
+  --color-button-normal-border: var(--color-buttonNormalBorder);
+
+  --color-form-input-bg: var(--color-formInputBackground);
+  --color-form-input-border: var(--color-formInputBorder);
+  --color-form-input-text: var(--color-formInputText);
+  --color-form-label-text: var(--color-formLabelText);
+
+  --color-menu-bg: var(--color-menuBackground);
+  --color-menu-text: var(--color-menuItemText);
+  --color-menu-item-bg-hover: var(--color-menuItemBackgroundHover);
+  --color-menu-border: var(--color-menuBorder);
+
+  --color-notice-background: var(--color-noticeBackground);
+  --color-notice-text: var(--color-noticeText);
+  --color-notice-border: var(--color-noticeBorder);
+  --color-warning-background: var(--color-warningBackground);
+  --color-warning-text: var(--color-warningText);
+  --color-warning-border: var(--color-warningBorder);
+  --color-error-background: var(--color-errorBackground);
+  --color-error-text: var(--color-errorText);
+  --color-error-border: var(--color-errorBorder);
+
+  /* Sidebar width */
+  --sidebar-width: 240px;
+  --sidebar-min-width: 200px;
+}
+
+/* Light theme (default) */
+:root,
+[data-theme="light"] {
+  --color-pageBackground: #f7fafc;
+  --color-pageText: #272630;
+  --color-pageTextSubdued: #627d98;
+  --color-pageTextLight: #9fb3c8;
+
+  --color-sidebarBackground: #102a43;
+  --color-sidebarItemText: #d9e2ec;
+  --color-sidebarItemTextSelected: #b990ff;
+  --color-sidebarItemBackgroundHover: #334e68;
+  --color-sidebarItemAccentSelected: #b990ff;
+  --color-sidebarBudgetName: #d9e2ec;
+
+  --color-cardBackground: #ffffff;
+  --color-cardBorder: #e0e5ec;
+
+  --color-tableBackground: #ffffff;
+  --color-tableHeaderBackground: #f0f4f8;
+  --color-tableRowBackgroundHover: #f0f4f8;
+  --color-tableBorder: #e0e5ec;
+  --color-tableText: #272630;
+
+  --color-buttonPrimaryBackground: #9446ed;
+  --color-buttonPrimaryText: #ffffff;
+  --color-buttonPrimaryBorder: #7b2fc9;
+  --color-buttonNormalBackground: #ffffff;
+  --color-buttonNormalText: #272630;
+  --color-buttonNormalBorder: #d9e2ec;
+
+  --color-formInputBackground: #ffffff;
+  --color-formInputBorder: #d9e2ec;
+  --color-formInputText: #272630;
+  --color-formLabelText: #627d98;
+
+  --color-menuBackground: #ffffff;
+  --color-menuItemText: #272630;
+  --color-menuItemBackgroundHover: #f0f4f8;
+  --color-menuBorder: #e0e5ec;
+
+  --color-noticeBackground: #e3f8ff;
+  --color-noticeText: #035388;
+  --color-noticeBorder: #b6e0fe;
+  --color-warningBackground: #fffbea;
+  --color-warningText: #8d2b0b;
+  --color-warningBorder: #fce588;
+  --color-errorBackground: #ffe3e3;
+  --color-errorText: #610316;
+  --color-errorBorder: #f86a6a;
+}
+
+/* Dark theme */
+[data-theme="dark"] {
+  --color-pageBackground: #080811;
+  --color-pageText: #d9e2ec;
+  --color-pageTextSubdued: #829ab1;
+  --color-pageTextLight: #627d98;
+
+  --color-sidebarBackground: #102a43;
+  --color-sidebarItemText: #d9e2ec;
+  --color-sidebarItemTextSelected: #b990ff;
+  --color-sidebarItemBackgroundHover: #243b53;
+  --color-sidebarItemAccentSelected: #b990ff;
+  --color-sidebarBudgetName: #d9e2ec;
+
+  --color-cardBackground: #1a1a2e;
+  --color-cardBorder: #2d2d44;
+
+  --color-tableBackground: #1a1a2e;
+  --color-tableHeaderBackground: #16213e;
+  --color-tableRowBackgroundHover: #16213e;
+  --color-tableBorder: #2d2d44;
+  --color-tableText: #d9e2ec;
+
+  --color-buttonPrimaryBackground: #9446ed;
+  --color-buttonPrimaryText: #ffffff;
+  --color-buttonPrimaryBorder: #7b2fc9;
+  --color-buttonNormalBackground: #1a1a2e;
+  --color-buttonNormalText: #d9e2ec;
+  --color-buttonNormalBorder: #2d2d44;
+
+  --color-formInputBackground: #1a1a2e;
+  --color-formInputBorder: #2d2d44;
+  --color-formInputText: #d9e2ec;
+  --color-formLabelText: #829ab1;
+
+  --color-menuBackground: #1a1a2e;
+  --color-menuItemText: #d9e2ec;
+  --color-menuItemBackgroundHover: #16213e;
+  --color-menuBorder: #2d2d44;
+
+  --color-noticeBackground: #0a558c;
+  --color-noticeText: #b6e0fe;
+  --color-noticeBorder: #0a558c;
+  --color-warningBackground: #513c06;
+  --color-warningText: #fce588;
+  --color-warningBorder: #513c06;
+  --color-errorBackground: #610316;
+  --color-errorText: #ffe3e3;
+  --color-errorBorder: #ab091e;
+}
+
+/* Base styles */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+    Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#__next {
+  height: 100%;
+}

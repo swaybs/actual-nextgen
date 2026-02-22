@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"","debugId":null}},
+    {"offset": {"line": 54, "column": 0}, "map": {"version":3,"sources":["file:///home/nodes/development/actual-nextgen/packages/web/src/app/api/info/route.ts"],"sourcesContent":["import { NextResponse } from 'next/server';\n\nimport pkg from '../../../../package.json';\n\nexport function GET() {\n  return NextResponse.json({\n    build: {\n      name: pkg.name,\n      description: 'Actual Budget NextGen — self-hosted personal finance',\n      version: pkg.version,\n    },\n  });\n}\n"],"names":[],"mappings":";;;;AAAA;AAEA;;;AAEO,SAAS;IACd,OAAO,gJAAY,CAAC,IAAI,CAAC;QACvB,OAAO;YACL,MAAM,6GAAG,CAAC,IAAI;YACd,aAAa;YACb,SAAS,6GAAG,CAAC,OAAO;QACtB;IACF;AACF","debugId":null}}]
+}
